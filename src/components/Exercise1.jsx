@@ -1,9 +1,16 @@
-const Exercise1 = () => {
+import { users } from "../data/data.js";
+
+const listItems = users.map((user) => {
   return (
-    <ul>
-      <li>ここに適切なリストを表示してください</li>
-    </ul>
+    <li key={user.id}>
+      {user.name}
+      {user.age >= 18 && "（成人）"}
+    </li>
   );
+});
+
+const Exercise1 = () => {
+  return <ul>{listItems}</ul>;
 };
 
 export default Exercise1;
