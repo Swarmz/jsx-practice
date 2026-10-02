@@ -2,7 +2,7 @@ import { users } from "../data/data.js";
 
 const listItems = users.map((user) => {
   return (
-    <li key={user.id}>{user.age >= 20 ? user.name + "（成人）" : user.name}</li>
+    <li key={user.id}>{user.age >= 18 ? user.name + "（成人）" : user.name}</li>
   );
 });
 
